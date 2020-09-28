@@ -7,10 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/54348ea8af.js" crossorigin="anonymous"></script>
+    <style>
+      .carousel-item:after {
+        content:"";
+        position:absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background:rgba(0,0,0,0.7);
+      }
+      .carousel-caption {
+        /* vertically align elements, get rid of the extra bottom space */
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: initial;
+      }
+      .item {
+        /* prevent blurry elements when placed on half a pixel */
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+      }
+    </style>
+  
   </head>
 
   <body>
@@ -18,7 +42,7 @@
       <a class="navbar-brand" href="index.html">
       	<i class="fas fa-dice-d20 fa-spin fa-1x"></i> Board Game Store
       </a>
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,10 +60,68 @@
       </div>
     </nav>
     
+    <div id="indexCarousel" class="carousel slide" data-ride="carousel">  
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#indexCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#indexCarousel" data-slide-to="1"></li>
+        <li data-target="#indexCarousel" data-slide-to="2"></li>
+      </ol>
+      
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <!-- slide 1 -> index.html -->
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="images/monopolyOriginal.jpg" alt="Monopoly Game">
+          <a href="index.html">
+            <div class="carousel-caption">
+              <h1 class="h5 d-md-none">Board Game Store</h1>
+              <h1 class="d-none d-md-block">Board Game Store</h1>
+              <p>Description</p>
+            </div>
+          </a>
+        </div>
+        <!-- slide 2 -> products.html -->
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/monopolyOriginal.jpg" alt="Second slide">
+          <a href="products.html">
+            <div class="carousel-caption">
+              <h1 class="h5 d-md-none">Products</h1>
+              <h1 class="d-none d-md-block">Products</h1>
+              <p>Description</p>
+            </div>
+          </a>
+        </div>
+        <!-- slide 3 -> newsletter.html -->
+        <div class="carousel-item">
+          <img class="d-block w-100" src="images/monopolyOriginal.jpg" alt="Third slide">
+          <a href="newsletter.html">
+            <div class="carousel-caption">
+              <h1 class="h5 d-md-none">Newsletter</h1>
+              <h1 class="d-none d-md-block">Newsletter</h1>
+              <p>Description</p>
+            </div>
+          </a>
+        </div>
+
+      </div>
+      
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#indexCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#indexCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a> 
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  </body>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
 </html>
