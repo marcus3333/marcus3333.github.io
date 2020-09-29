@@ -15,38 +15,44 @@
     <!-- CSS for Bootstrap Carousel -->
     <link rel="stylesheet" href="css/carousel.css">
 
+    <!-- CSS for customized Boostrap -->
+    <link rel="stylesheet" href="css/bs-custom.css">
+
     <style>
-      
     </style>
   
   </head>
 
   <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="index.html">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html" tabindex="-1">
       	<i class="fas fa-dice-d20 fa-spin fa-1x"></i> Board Game Store
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mx-auto text-center">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home<span class="sr-only"> (current)</span></a>
+            <a class="nav-link" href="index.html" tabindex="1">Home<span class="sr-only"> (current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="products.html">Products</a>
+            <a class="nav-link" href="products.html" tabindex="1">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="newsletter.html">Newsletter</a>
+            <a class="nav-link" href="newsletter.html" tabindex="1">Newsletter</a>
           </li>
         </ul>
+        <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+          <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/" tabindex="2"><i class="fa fa-facebook mr-2"></i></a> </li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/" tabindex="2"><i class="fa fa-instagram"></i></a> </li>
+      </ul>
       </div>
     </nav>
     
     <!-- Carousel with link to other site pages -->
-    <section>
+    <section class="border-top border-bottom border-custom-color">
       <div id="indexCarousel" class="carousel slide" data-ride="carousel">  
         
         <!-- Indicators -->
@@ -85,9 +91,9 @@
               </div>
               <div class="carousel-caption d-none d-md-block">
                 <h1><strong>Products</strong></h1>
-                <p>Our catalog includes a wide range of games. There is something for everyone.</p>
+                <p>Our catalog includes a wide range of games. Something for everyone.</p>
                 <p>The selection is unique and from young to old, everyone will find the right game here. Family games enable the whole family to spend a sociable time together.</p>
-                <p>With our expert games you and your friends will be entertained for hours and you will forget all about time. Get involved in something new and you will discover a new world of entertainment.</p>
+                <p>With our expert games you and your friends will be entertained for hours and you will forget all about time. Discover a new world of entertainment.</p>
                 <p><b>Check out our full offer!</b></p>
               </div>
             </a>
@@ -124,8 +130,96 @@
     </section>
 
     <!-- new products section-->
-    <section>
-
+    <section class="bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <h1 class="mx-auto pt-1 pt-md-3 pb-1 border-bottom border-custom-color border-custom-width">
+            <strong>New Products</strong>
+          </h1>
+        </div>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_1">
+            <div class="img-thumbnail">
+              <a href="product.html" tabindex="3">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                  <h1 class="h5">La Cosa Nostra</h1>
+                  <p class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p>
+                    <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_2">
+            <div class="img-thumbnail">
+              <a href="product.html" tabindex="3">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                  <h1 class="h5">La Cosa Nostra</h1>
+                  <p class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p>
+                    <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_3">
+            <div class="img-thumbnail">
+              <a href="product.html" tabindex="3">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                  <h1 class="h5">La Cosa Nostra</h1>
+                  <p class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p>
+                    <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_4">
+            <div class="img-thumbnail">
+              <a href="product.html" tabindex="3">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                  <h1 class="h5">La Cosa Nostra</h1>
+                  <p class="text-warning">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </p>
+                  <p>
+                    <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Optional JavaScript -->

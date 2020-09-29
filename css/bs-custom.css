@@ -1,0 +1,20 @@
+.border-custom-color {
+    border-color:#9A9DA0 !important;
+}
+.border-custom-width {
+    border-width: 2px !important;
+}
+.img-thumbnail {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #9A9DA0 !important;
+  padding: 8px;
+}
+.img-thumbnail a {
+  color: #ffffff;
+}
+.img-thumbnail a:hover {
+  color: #b3b3b3;
+}
+.img-thumbnail a:focus {
+  color: #b3b3b3;
+}
