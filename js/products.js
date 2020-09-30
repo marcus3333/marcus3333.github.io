@@ -25,8 +25,8 @@ function hideProduct(id) {
   var visibility = document.getElementById(id).checked;
   // storing categoryName of checkbox 
   var category = document.getElementById(id).value;
-  // storing of all product <div>s whose gameCategory attribute value contains the category 
-  var products = document.querySelectorAll('div[gameCategory*="' + category + '"]');
+  // storing of all product <div>s whose data-gamecategory attribute value contains the category 
+  var products = document.querySelectorAll('div[data-gamecategory*="' + category + '"]');
   // changing of product classes depending on visibility
   for (var product of products) {
     if (visibility === true) {
