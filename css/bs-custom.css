@@ -21,12 +21,3 @@ a:hover, a:focus {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }
-
-/* Padding and height for sticky navbar at top */
-body {
-  min-height: 75rem;
-  padding-top: 10vh;
-}
-.navbar {
-    height: 10vh;
-}
