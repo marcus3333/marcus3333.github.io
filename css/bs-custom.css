@@ -14,12 +14,12 @@
 }
 a {
   color: #ffffff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
-a:hover {
-  color: #b3b3b3;
-}
-a:focus {
-  color: #b3b3b3;
+a:hover, a:focus {
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
 }
 
 /* Padding and height for sticky navbar at top */
