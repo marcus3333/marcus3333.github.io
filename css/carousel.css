@@ -29,3 +29,8 @@
     height: 10px;
     border-radius: 100%;
   }
+
+  .carousel h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
