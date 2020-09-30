@@ -14,10 +14,33 @@
 }
 a {
   color: #ffffff;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 a:hover, a:focus {
   color: rgba(0, 0, 0, 0.5);
   text-decoration: none;
+}
+
+/* Product Filter */
+#productFilter input, #productFilter label, #productFilter .form-check-inline {
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+#productFilter .form-check-inline:hover, #productFilter .form-check-inline:focus {
+  color: rgba(0, 0, 0, 0.5);
+}
+#productFilter ul {
+  list-style-type: none;
+}
+
+/* class for product whose category is NOT selected */
+.productHidden {
+  display: none;
+}
+
+/* class for product whose category is selected */
+.productVisible {
+  display: block;
 }

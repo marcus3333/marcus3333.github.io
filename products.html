@@ -1,1 +1,476 @@
-products.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Board Game Store - Products</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/54348ea8af.js" crossorigin="anonymous"></script>
+
+    <!-- CSS for Bootstrap Carousel -->
+    <link rel="stylesheet" href="css/carousel.css">
+
+    <!-- CSS for customized Boostrap -->
+    <link rel="stylesheet" href="css/bs-custom.css">
+
+    <!-- CSS for Footer -->
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- JS for the product filter -->
+    <script src = "js/products.js"></script>
+
+    <style>
+    </style>
+
+    <script>
+    </script>
+  
+  </head>
+
+  <body class="d-flex flex-column">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top border-bottom border-custom-color">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html" tabindex="-1">
+      	<i class="fas fa-dice-d20 fa-spin fa-1x"></i> Board Game Store
+      </a>
+      <!-- Brand -->
+
+      <!-- Collapsed Menu Button-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Collapsed Menu Button-->
+
+      <!-- Navigation Links + Social Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" tabindex="1">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="products.html" tabindex="1">Products<span class="sr-only"> (current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="newsletter.html" tabindex="1">Newsletter</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav flex-row justify-content-center flex-nowrap">
+          <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/" tabindex="1"><i class="fa fa-facebook mr-2"></i><span class="sr-only">Facebook</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/" tabindex="1"><i class="fa fa-instagram mr-2"></i><span class="sr-only">Instagram</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.twitter.com/" tabindex="1"><i class="fa fa-twitter"></i><span class="sr-only">Twitter</span></a></li>
+      </ul>
+      </div>
+      <!-- Navigation Links + Social Links -->
+
+    </nav>
+    <!-- Navigation Bar -->
+    
+    <main id="page-content" class="bg-dark text-white">
+      <!-- Products section-->
+      <section>
+        <div class="container">
+
+          <!-- Product Heading -->
+          <div class="row">
+            <h1 class="h5 mx-auto pt-2 pb-1 border-bottom border-custom-color border-custom-width d-sm-none">
+              <strong>Products</strong>
+            </h1>
+            <h1 class="mx-auto pt-3 pb-1 border-bottom border-custom-color border-custom-width d-none d-sm-block">
+              <strong>Products</strong>
+            </h1>
+          </div>
+          <!-- Product Heading -->
+
+          <!-- Product Filter -->
+          <div class="row p-2" id="productFilter">
+            <div class="col-6 col-md form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="checkboxAllCategories" value="allCategories" onchange="selectAllCategories()" checked tabindex="1">
+              <label class="form-check-label" for="checkboxAllCategories">no/all categories</label>
+            </div>
+            <div class="col-5 col-md form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="catCheckboxFamilyGames" value="familyGames" onchange="hideProduct('catCheckboxFamilyGames')" checked tabindex="1">
+              <label class="form-check-label" for="catCheckboxFamilyGames">family games</label>
+            </div>
+            <div class="col-6 col-md form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="catCheckboxExpertGames" value="expertGames" onchange="hideProduct('catCheckboxExpertGames')" checked tabindex="1">
+              <label class="form-check-label" for="catCheckboxExpertGames">expert games</label>
+            </div>
+            <div class="col-5 col-md form-check form-check-inline">
+              <input class="form-check-input" type="checkbox" id="catCheckboxPartyGames" value="partyGames" onchange="hideProduct('catCheckboxPartyGames')" checked tabindex="1">
+              <label class="form-check-label" for="catCheckboxPartyGames">party games</label>
+            </div>
+          </div>
+          <!-- Product Filter -->
+
+          <!-- all Products -->
+          <div class="row">
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_1" gameCategory="familyGames">
+              <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                  <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                  <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>family game</li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_2" gameCategory="expertGames">
+              <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                  <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                  <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>expert game</li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_3" gameCategory="partyGames">
+              <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                  <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                  <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>party game</li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_4" gameCategory="familyGames expertGames">
+              <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                  <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                  <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>family game</li>
+                        <li>expert game</li>
+                      </ul>
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_5" gameCategory="familyGames partyGames">
+                <div class="img-thumbnail">
+                  <a href="product.html" tabindex="2">
+                    <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                    <div class="caption text-center">
+                      <h2 class="h5">La Cosa Nostra</h2>
+                      <p class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </p>
+                      <p>
+                        <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                      </p>
+                      <p>
+                        <ul class="small">
+                          <li>family game</li>
+                          <li>party game</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_6" gameCategory="expertGames partyGames">
+            <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>expert game</li>
+                        <li>party game</li>
+                      </ul>
+                    </p>
+                </div>
+                </a>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_7" gameCategory="familyGames expertGames partyGames">
+            <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>family game</li>
+                        <li>expert game</li>
+                        <li>party game</li>
+                      </ul>
+                    </p>
+                </div>
+                </a>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_8" gameCategory="familyGames partyGames">
+            <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>family game</li>
+                        <li>party game</li>
+                      </ul>
+                    </p>
+                </div>
+                </a>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_9" gameCategory="familyGames expertGames">
+                <div class="img-thumbnail">
+                  <a href="product.html" tabindex="2">
+                    <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                    <div class="caption text-center">
+                      <h2 class="h5">La Cosa Nostra</h2>
+                      <p class="text-warning">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </p>
+                      <p>
+                        <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                      </p>
+                      <p>
+                        <ul class="small">
+                          <li>family game</li>
+                          <li>expert game</li>
+                        </ul>
+                      </p>
+                    </div>
+                  </a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_10" gameCategory="expertGames">
+            <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>expert game</li>
+                      </ul>
+                    </p>
+                </div>
+                </a>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_11" gameCategory="familyGames">
+            <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>family game</li>
+                      </ul>
+                    </p>
+                </div>
+                </a>
+            </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 p-2" id="Product_12" gameCategory="partyGames">
+            <div class="img-thumbnail">
+                <a href="product.html" tabindex="2">
+                <img src="images/product_500x500.png" alt="Product" style="width:100%">
+                <div class="caption text-center">
+                    <h2 class="h5">La Cosa Nostra</h2>
+                    <p class="text-warning">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </p>
+                    <p>
+                      <i class="far fa-money-bill-alt mr-2"></i> 30.00 $
+                    </p>
+                    <p>
+                      <ul class="small">
+                        <li>party game</li>
+                      </ul>
+                    </p>
+                </div>
+                </a>
+            </div>
+            </div>
+          </div>
+          <!-- all Products -->
+
+        </div>
+      </section>
+      <!-- Products section-->
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="sticky-footer" class="bg-dark pt-3">
+
+      <!-- Footer Elements -->
+      <div class="container">
+
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-facebook mx-1" href="https://www.facebook.com/" tabindex="3">
+              <i class="fab fa-facebook-f"></i><span class="sr-only">Facebook</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-instagram mx-1" href="https://www.instagram.com/" tabindex="3">
+              <i class="fab fa-instagram"></i><span class="sr-only">Instagram</span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-twitter mx-1" href="https://www.twitter.com/" tabindex="3">
+              <i class="fab fa-twitter"></i><span class="sr-only">Twitter</span>
+            </a>
+          </li>
+        </ul>
+        <!-- Social buttons -->
+
+      </div>
+      <!-- Footer Elements -->
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 border-top border-custom-color">© 2020 Copyright:
+        <a href="https://marcus3333.github.io/"> Marcus</a>
+      </div>
+      <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
