@@ -30,7 +30,7 @@ function hideProduct(id) {
   // changing of product classes depending on visibility
   for (var product of products) {
     if (visibility === true) {
-      product.className = "col-12 col-sm-6 col-md-3 p-2 productVisible";
+      product.className = "col-12 col-sm-6 col-lg-3 p-2 productVisible";
     }
     else {
       product.className = "productHidden";
