@@ -89,3 +89,9 @@ a:hover, a:focus {
 .price i, .price {
     font-size: x-large;
 }
+/* rounded-0-sm class added */
+@media (max-width: 575.98px) {
+  .rounded-0-sm {
+    border-radius: 0 !important;
+  }
+}
